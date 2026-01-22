@@ -35,12 +35,14 @@ DJANGO_APPS = [
 # Third party apps
 THIRD_PARTY_APPS = [
     'rest_framework',
-
+    'corsheaders',
+    'django_extensions',
+    'cid.apps.CidAppConfig',
 ]
 
 # Add In House Project Apps Here
 PROJECT_APPS = [
-
+    'shortener'
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + PROJECT_APPS
@@ -172,7 +174,7 @@ CORS_ALLOW_HEADERS = [
 
 # LOGGING SETUP START #
 LOG_LEVEL = env.str('LOG_LEVEL', 'DEBUG')
-LOGGER_ROOT_NAME = env.str("LOGGER_ROOT_NAME", "url_shorter")
+LOGGER_ROOT_NAME = env.str("LOGGER_ROOT_NAME", "miniLink")
 REQUEST_TIMEOUT = env.int("REQUEST_TIMEOUT", 30)
 
 LOGGING = {
