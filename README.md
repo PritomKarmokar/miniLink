@@ -54,3 +54,6 @@ docker exec -it <container id> bash
 python manage.py migrate
 python manage.py createsuperuser
 ```
+## 📚 API Documentation
+- The complete API reference is available in the `docs` directory.
+- [View API Documentation](./docs/api_documentation.md)
