@@ -13,8 +13,8 @@ from applibs.status import INVALID_LINK_PROVIDED
 logger = get_logger(__name__)
 
 class RedirectUrlAPI(APIView):
-    def get(self, request: Request, hashed_token: str) -> Response:
-        hashed_token = generate_hashed_token(hashed_token)
+    def get(self, request: Request, token: str) -> Response:
+        hashed_token = generate_hashed_token(token)
         url_object = UrlShortener.objects.fetch_short_url_by_hashed_token(hashed_token)
         if not url_object:
             return Response(
