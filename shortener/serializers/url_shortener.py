@@ -1,4 +1,4 @@
 from rest_framework import serializers
 
 class GenerateShortUrlSerializer(serializers.Serializer):
-    url = serializers.CharField(max_length=2048)
+    url = serializers.URLField(max_length=2048)
